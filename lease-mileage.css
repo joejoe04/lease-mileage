@@ -1,3 +1,7 @@
+.lc-ctnr * {
+  box-sizing: border-box;
+}
+
 .lc-darken {
   position: fixed;
   width: 100%;
@@ -32,4 +36,32 @@
 .lc-input-ctnr input {
   display: block;
   width: 100%;
+  border: none;
+  margin-top: 8px;
+}
+
+.lc-input-ctnr input {
+  padding: 8px;
+  background: rgba(255, 255, 255, .8);
+}
+
+.lc-input-ctnr input:hover,
+.lc-input-ctnr input:focus,
+.lc-input-ctnr input:active {
+  background: #fff;
+}
+
+.lc-submit {
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  padding: 8px;
+  border: none;
+}
+
+.lc-submit:hover,
+.lc-submit:focus,
+.lc-submit:active {
+  background: rgba(0, 0, 0, .6);
+  cursor: pointer;
 }

@@ -9,6 +9,7 @@ const createLeaseCalcHTML = (e) => {
   let leaseCalcHTML = [
 
     '<div class="lc-ctnr">',
+    '<h2>Lease Mileage Calculator</h2>',
       '<form action="" id="lc-form" class="lc-form">',
         '<div class="lc-input-ctnr">',
           '<label for="lc-start-date">Lease Start Date (MM/DD/YYYY)</label>',
@@ -16,7 +17,7 @@ const createLeaseCalcHTML = (e) => {
         '</div>',
         '<div class="lc-input-ctnr">',
           '<label for="lc-duration-years">Lease Duration (years)</label>',
-          '<input type="text" name="lc-duration-years" id="lc-duration-years" value="3">',
+          '<input type="text" name="lc-duration-years" id="lc-duration-years">',
         '</div>',
         '<div class="lc-input-ctnr">',
           '<label for="lc-miles-per-year">Miles Allowed Per Year</label>',
@@ -30,7 +31,7 @@ const createLeaseCalcHTML = (e) => {
           '<label for="lc-mileage-before-lease">Miles on car before lease started</label>',
           '<input type="text" name="lc-mileage-before-lease" id="lc-mileage-before-lease" value="400">',
         '</div>',
-      '<input class="lc-lease-calc-trigger" type="submit" id="lc-submit" value="Calculate"></input>',
+      '<input class="lc-lease-calc-trigger lc-submit" type="submit" id="lc-submit" value="Calculate"></input>',
       '</form>',
       '<div class="lc-results">',
         '<p class="lc-miles-over-under" id="lc-miles-over-under"></p>',
@@ -108,7 +109,7 @@ const calculateLeaseInfo = (e) => {
 
   document.getElementById('lc-orig-miles-per-day').innerText = origMilesPerDayMsg;
   
-  const leaseAdjustedMilesPerDayMsg = 'At this point, you can drive about an average of ' + leaseAdjustedMilesPerDay.toFixed(2) + ' miles per day and return your car at your lease\'s mileage limit.';
+  const leaseAdjustedMilesPerDayMsg = 'Given your current mileage, you can drive an average of ' + leaseAdjustedMilesPerDay.toFixed(2) + ' miles per day and return your car at your lease\'s mileage limit.';
 
   document.getElementById('lc-adjusted-miles-per-day').innerText = leaseAdjustedMilesPerDayMsg;
 };
