@@ -1,0 +1,35 @@
+.lc-darken {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #00000099;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.lc-ctnr {
+  width: 100%;
+  max-width: 400px; 
+  background: #ccc;
+  padding: 40px;
+}
+
+.lc-input-ctnr {
+  margin: 20px 0;
+}
+.lc-input-ctnr:first-child {
+  margin-top: 0;
+}
+
+.lc-input-ctnr label,
+.lc-input-ctnr input {
+  display: block;
+  width: 100%;
+}
