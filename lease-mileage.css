@@ -4,9 +4,10 @@
 
 .lc-darken {
   position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 100%;
-  background: #00000099;
+  background: rgba(0, 0, 0, .6);
   top: 0;
   left: 0;
   right: 0;
@@ -20,9 +21,17 @@
 
 .lc-ctnr {
   width: 100%;
-  max-width: 400px; 
+  max-width: 500px; 
   background: #ccc;
   padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  overflow: auto;
+  max-height: 90vh;
+}
+
+.lc-ctnr h2 {
+  margin-bottom: 20px;
 }
 
 .lc-input-ctnr {
@@ -31,6 +40,9 @@
 .lc-input-ctnr:first-child {
   margin-top: 0;
 }
+.lc-input-ctnr--last {
+  margin: 20px 0 40px 0;
+}
 
 .lc-input-ctnr label,
 .lc-input-ctnr input {
@@ -38,11 +50,55 @@
   width: 100%;
   border: none;
   margin-top: 8px;
+  font-family: "open sans";
+  text-align: left;
+  color: #333;
+}
+
+.lc-input-ctnr {
+  position: relative;
+  overflow: visible;
 }
 
 .lc-input-ctnr input {
   padding: 8px;
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .6);
+  position: relative;
+  overflow: visible;
+  margin-top: 0;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.lc-input-ctnr::after {
+  content: none;
+  color: darkred;
+  position: absolute;
+  bottom: -1.3em;
+  font-size: 14px;
+}
+#lc-start-date-ctr.lc-not-valid::after {
+  content: "Format must be: mm/dd/yyyy";
+  
+}
+#lc-duration-years-ctr.lc-not-valid::after {
+  content: "Required: 1 digit number";
+  
+}
+#lc-miles-per-year-ctr.lc-not-valid::after {
+  content: "Required: any number";
+  
+}
+#lc-current-mileage-ctr.lc-not-valid::after {
+  content: "Required: any number";
+  
+}
+#lc-mileage-before-lease-ctr.lc-not-valid::after {
+  content: "Required: any number";
+}
+
+.lc-form-invalid-msg {
+  color: darkred;
 }
 
 .lc-input-ctnr input:hover,
@@ -51,17 +107,51 @@
   background: #fff;
 }
 
+.lc-results p {
+  margin: 20px 0 0;
+}
+
 .lc-submit {
   width: 100%;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .9);
   color: #fff;
   padding: 8px;
   border: none;
+  transition: all 0.5s;
+  border-radius: 5px;
 }
 
 .lc-submit:hover,
 .lc-submit:focus,
 .lc-submit:active {
   background: rgba(0, 0, 0, .6);
+  cursor: pointer;
+}
+
+.lc-close {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.lc-close::after {
+  content: "\e606";
+  font-size: 25px;
+  line-height: 1;
+  font-family: icons;
+  color: #fff;
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.lc-close:hover::after,
+.lc-close:focus::after,
+.lc-close:active::after {
+  color: rgb(51, 51, 51);
   cursor: pointer;
 }
