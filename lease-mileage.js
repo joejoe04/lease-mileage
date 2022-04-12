@@ -13,7 +13,7 @@ const createLeaseCalcHTML = (e) => {
       '<form action="" id="lc-form" class="lc-form">',
         '<div id="lc-start-date-ctr" class="lc-input-ctnr">',
           '<label for="lc-start-date">Lease Start Date</label>',
-          '<input type="date" name="lc-start-date" id="lc-start-date" value="" placeholder="08/16/2021">',
+          '<input type="date" name="lc-start-date" id="lc-start-date" value="2021/08/16" placeholder="2021/08/16">',
         '</div>',
         '<div id="lc-duration-years-ctr" class="lc-input-ctnr">',
           '<label for="lc-duration-years">Lease Duration (years)</label>',
