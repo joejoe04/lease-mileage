@@ -74,8 +74,9 @@
   content: none;
   color: darkred;
   position: absolute;
-  bottom: -1.3em;
+  bottom: -1.4em;
   font-size: 14px;
+  width: 100%;
 }
 #lc-start-date-ctr.lc-not-valid::after {
   content: "Format must be: mm/dd/yyyy";
